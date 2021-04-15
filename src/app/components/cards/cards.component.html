@@ -1,0 +1,20 @@
+<h1>Horarios Disponibles {{counter}}</h1>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col mb-3" class="card" style="width: 18rem;" *ngFor="let item of items"
+            [ngClass]="{'active': item.active===true}" (click)="toggleClass(item)">
+            <div class="card-header">
+                Reservar
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">{{ item.name }}</h5>
+                <p class="card-text">Ocupado : {{item.bussy}} </p>
+
+            </div>
+
+        </div>
+    </div>
+
+</div>
